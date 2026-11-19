@@ -20,7 +20,7 @@ LazyLoad: \tab yes\cr
 For short overview see the webpage http://bgmm.molgen.mpg.de/rapBGMM/.
 }
 \author{
-Przemyslaw Biecek \& Ewa Szczurek
+Przemyslaw Biecek & Ewa Szczurek
 
 Maintainer: Przemyslaw Biecek <P.Biecek@mimuw.edu.pl>
 }

@@ -64,7 +64,7 @@ plotList.2d <-function(X, knowns, B, models2d, ...) {
   }
   par(mfrow=c(gridwi, gridhe), mar=c(2,2,2,1))
   for (i in seq_along(models2d[[2]])) 
-    plot.2d(X, knowns, map(B), models2d[[1]][[i]], main=models2d[[3]][[i]], ...) 
+    plot2d(X, knowns, map(B), models2d[[1]][[i]], main=models2d[[3]][[i]], ...) 
 }
 
 plotList.1d <-function(X, knowns, B, models1d, ...) {
@@ -79,6 +79,6 @@ plotList.1d <-function(X, knowns, B, models1d, ...) {
 
   par(mfrow=c(gridwi, gridhe), mar=c(2,2,2,1))
   for (i in seq_along(models1d[[2]])) 
-    plot.1d(X, knowns, map(B), models1d[[1]][[i]], main=models1d[[3]][[i]], ...) 
+    plot1d(X, knowns, map(B), models1d[[1]][[i]], main=models1d[[3]][[i]], ...) 
 }
 

@@ -14,13 +14,13 @@ plot.mModel <- function(x, ...) {
    }
 
   if (x$d == 1) 
-    plot.1d(x$X, x$knowns, map.class, x, ...)
+    plot1d(x$X, x$knowns, map.class, x, ...)
   if (x$d > 1) 
-    plot.2d(x$X, x$knowns, map.class, x, ...)
+    plot2d(x$X, x$knowns, map.class, x, ...)
 }
 
 
-plot.2d <-function(X, knowns, map.class, bgmm2d, ...) {
+plot2d <-function(X, knowns, map.class, bgmm2d, ...) {
   if (bgmm2d$d > 2) {
       tmp     <- prcomp(rbind(X, knowns))
       bgmm2d$mu<- data.frame(bgmm2d$mu)
@@ -60,7 +60,7 @@ plot.2d <-function(X, knowns, map.class, bgmm2d, ...) {
 }
 
 
-plot.1d <-function(X, knowns, map.class, bgmm1d, npoints=1000, addHlines=TRUE, ...) {
+plot1d <-function(X, knowns, map.class, bgmm1d, npoints=1000, addHlines=TRUE, ...) {
    Xk = rbind(X, knowns)
    
    densx = seq(min(Xk), max(Xk), length.out=npoints)

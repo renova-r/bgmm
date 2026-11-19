@@ -48,7 +48,7 @@ init.model.params <- function(X=NULL, knowns=NULL, class=NULL, k=length(unique(c
  if (is.null(class) & !is.null(B))             class = map(B)
  if (is.null(k))   length(unique(class))
  
- if (class(class) == "factor")   class = as.numeric(class)
+ if (class(class)[1L] == "factor")   class = as.numeric(class)
  if (method == "knowns") {
      model.params = init.model.params.knowns(knowns, class, k, d)
 	 # if there is not enough labeled cases just cast an error
